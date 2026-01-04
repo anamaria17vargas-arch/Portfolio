@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SOBRE MÍ</title>
+
+  <!-- Fuente pixel -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      /* ===== CURSOR CUSTOM 24x24 ===== */
+      cursor: url("img/cursor.png") 12 12, auto;
+    }
+
+    a {
+      cursor: url("img/cursor.png") 12 12, pointer;
+    }
+
+    /* ===== MARCO UNIFICADO ===== */
+    .marco {
+      width: 90vw;
+      height: 90vh;
+      background-color: #0d0d0d;
+      padding: 22px;
+      box-sizing: border-box;
+      border: 1px dotted white;
+      position: relative;
+    }
+
+    .marco::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px dotted rgba(255,255,255,0.4);
+      pointer-events: none;
+    }
+
+    .marco::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      opacity: 0.07;
+      mix-blend-mode: overlay;
+      animation: ruido 3s steps(2) infinite;
+      pointer-events: none;
+    }
+
+    @keyframes ruido {
+      0% { transform: translate(0,0); }
+      50% { transform: translate(-1px,1px); }
+      100% { transform: translate(0,0); }
+    }
+
+    /* ===== HOJA ===== */
+    .hoja {
+      width: 100%;
+      height: 100%;
+      background: black;
+      border: 1px dotted white;
+      position: relative;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 20px 60px;
+      box-sizing: border-box;
+    }
+
+    .hoja::-webkit-scrollbar { display: none; }
+
+    /* ===== ENCABEZADO ===== */
+    .titulo-marco {
+      position: absolute;
+      top: 14px;
+      left: 22px;
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ===== TÍTULO PIXEL ===== */
+    .titulo-seccion {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 26px;
+      letter-spacing: 6px;
+      color: white;
+      margin-top: -18px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow:
+        0 0 4px rgba(255,255,255,0.6),
+        0 0 8px rgba(255,255,255,0.3),
+        2px 2px 0 rgba(255,255,255,0.15);
+      animation: flicker 3.5s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      10% { opacity: .7; }
+      15% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+
+    /* ===== DECORACIÓN ===== */
+    .decoracion {
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.6);
+      margin: 10px 0 40px;
+      text-align: center;
+    }
+
+    /* ===== SOBRE MI ===== */
+    .sobre-mi {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+
+    .sobre-mi img {
+      width: 350px;
+      height: auto;
+    }
+
+    /* ===== TITULO NOMBRE ===== */
+    .titulo-nombre {
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 16px;
+    }
+
+    .texto-sobre-mi {
+  max-width: 500px;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  text-align: left;
+
+  padding-top: 48px; /* ← baja el texto para alinearlo con la imagen */
+}
+
+    /* ===== MENÚ ===== */
+    .menu {
+      margin-top: auto;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .menu a {
+      background: white;
+      color: black;
+      padding: 10px 18px;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-family: "Times New Roman", Georgia, serif;
+      border: 1px dotted white;
+    }
+
+    .menu a:hover {
+      background: black;
+      color: white;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .sobre-mi {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .texto-sobre-mi {
+        text-align: center;
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="marco">
+    <div class="hoja">
+
+      <div class="titulo-marco">ARCHIVO VISUAL / ANIMACIÓN EXPERIMENTAL</div>
+
+      <div class="titulo-seccion">SOBRE MÍ</div>
+
+      <div class="decoracion">
+        ｡ ･: *: ･ ﾟ ★ ,｡ ･: *: ･ ﾟ ☆｡ ･: *: ･ ﾟ ★ ,｡ ･: *: ･ ﾟ ☆｡ ･: *:
+      </div>
+
+      <div class="sobre-mi">
+        <img src="img/sobre_mi.png" alt="Retrato">
+
+        <div class="texto-sobre-mi">
+          <div class="titulo-nombre">ANA MARIA VARGAS</div>
+
+          <p>
+            Artista visual enfocada en la creación de entornos y narrativas experimentales.
+            Mi nombre es Ana María, aunque mis amigos me llaman Anni...
+            Y desde que tengo memoria, me encanta crear.
+          </p>
+
+          <p>
+            Siempre me gustó experimentar con nuevos materiales. Me fascinaba ver cómo el aceite burbujeaba 
+            entre las acuarelas y las tintas se deslizaban con el soplo de un pitillo.
+          </p>
+
+          <p>
+            Trabajo con animación 2D y 3D, instalación audiovisual y experimentación con software en tiempo real,
+            entendiendo la imagen como un cuerpo que se transforma, falla y se reescribe.
+          </p>
+        </div>
+      </div>
+
+      <div class="decoracion">•✦───────────•✧</div>
+
+      <div class="menu">
+        <a href="index.html">INICIO</a>
+        <a href="error_404.html">ERROR_404</a>
+        <a href="la_noche.html">LA NOCHE</a>
+        <a href="deterioro.html">DETERIORO</a>
+        <a href="tren.html">TREN</a>
+        <a href="instalacion.html">INSTALACIÓN</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
