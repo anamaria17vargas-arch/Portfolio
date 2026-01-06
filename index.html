@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>ARCHIVO</title>
   
-   <!-- Open Graph / Social Preview -->
+  <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Ana María Vargas — Portafolio" />
   <meta property="og:description" content="Animación 2D, instalación audiovisual y experimentación digital." />
   <meta property="og:image" content="https://anamaria17vargas-arch.github.io/Portfolio/preview.gif" />
@@ -139,9 +139,7 @@
       animation: microglitch 14s infinite steps(1);
       display: block;
       margin: 0 auto;
-      /* ===== GLOW ===== */
       filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
-
     }
 
     @keyframes microglitch {
@@ -151,18 +149,7 @@
       100% { transform: translate(0,0); }
     }
 
-    /* ===== TEXTOS PRINCIPALES ===== */
-    .titulo-marco {
-      text-align: left;      /* alineación a la izquierda */
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: rgba(255,255,255,0.7);
-      font-family: "Courier New", monospace;
-      margin-top: 10px;      /* bajado dentro del marco */
-      margin-left: 10px;     /* margen desde el borde izquierdo */
-      margin-bottom: 20px;
-    }
-
+    /* ===== TEXTOS ===== */
     .entrada {
       font-size: 24px;
       letter-spacing: 6px;
@@ -189,7 +176,6 @@
 
     .registro {
       font-size: 12px;
-      letter-spacing: 1px;
       margin-bottom: 20px;
       color: rgba(255,255,255,0.7);
       font-family: "Courier New", monospace;
@@ -218,60 +204,37 @@
       background: black;
       color: white;
     }
+
+    /* =====================================
+       ✦ SOLO PC DE PANTALLA MÁS PEQUEÑA
+       (sin tocar celular ni PC grande)
+       ===================================== */
+    @media (min-width: 769px) and (max-width: 1100px) {
+
+      .polilla {
+        max-width: 480px;     /* polilla más pequeña */
+      }
+
+      .menu a {
+        padding: 8px 14px;    /* botones reducidos */
+        font-size: 10px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- PARTÍCULAS -->
   <div class="particulas">
+    <div class="particula" style="left:2%; animation-duration:16s; animation-delay:-3s;"></div>
+  </div>
 
-  <div class="particula" style="left:2%; animation-duration:16s; animation-delay:-3s;"></div>
-  <div class="particula" style="left:5%; width:1px; height:1px; animation-duration:18s; animation-delay:-9s;"></div>
-  <div class="particula" style="left:8%; width:2px; height:2px; animation-duration:14s; animation-delay:-5s;"></div>
-  <div class="particula" style="left:11%; animation-duration:20s; animation-delay:-12s;"></div>
-  <div class="particula" style="left:14%; width:1px; height:1px; animation-duration:22s; animation-delay:-7s;"></div>
-
-  <div class="particula" style="left:18%; animation-duration:16s; animation-delay:-10s;"></div>
-  <div class="particula" style="left:21%; width:3px; height:3px; animation-duration:18s; animation-delay:-4s;"></div>
-  <div class="particula" style="left:24%; width:1px; height:1px; animation-duration:14s; animation-delay:-8s;"></div>
-  <div class="particula" style="left:27%; animation-duration:20s; animation-delay:-15s;"></div>
-  <div class="particula" style="left:30%; width:2px; height:2px; animation-duration:22s; animation-delay:-6s;"></div>
-
-  <div class="particula" style="left:34%; animation-duration:16s; animation-delay:-11s;"></div>
-  <div class="particula" style="left:37%; width:1px; height:1px; animation-duration:18s; animation-delay:-5s;"></div>
-  <div class="particula" style="left:40%; width:3px; height:3px; animation-duration:14s; animation-delay:-9s;"></div>
-  <div class="particula" style="left:43%; animation-duration:20s; animation-delay:-13s;"></div>
-  <div class="particula" style="left:46%; width:1px; height:1px; animation-duration:22s; animation-delay:-7s;"></div>
-
-  <div class="particula" style="left:50%; animation-duration:16s; animation-delay:-4s;"></div>
-  <div class="particula" style="left:53%; width:2px; height:2px; animation-duration:18s; animation-delay:-10s;"></div>
-  <div class="particula" style="left:56%; width:1px; height:1px; animation-duration:14s; animation-delay:-6s;"></div>
-  <div class="particula" style="left:59%; animation-duration:20s; animation-delay:-14s;"></div>
-  <div class="particula" style="left:62%; width:3px; height:3px; animation-duration:22s; animation-delay:-8s;"></div>
-
-  <div class="particula" style="left:66%; animation-duration:16s; animation-delay:-12s;"></div>
-  <div class="particula" style="left:69%; width:1px; height:1px; animation-duration:18s; animation-delay:-5s;"></div>
-  <div class="particula" style="left:72%; width:2px; height:2px; animation-duration:14s; animation-delay:-9s;"></div>
-  <div class="particula" style="left:75%; animation-duration:20s; animation-delay:-15s;"></div>
-  <div class="particula" style="left:78%; width:1px; height:1px; animation-duration:22s; animation-delay:-7s;"></div>
-
-  <div class="particula" style="left:82%; animation-duration:16s; animation-delay:-6s;"></div>
-  <div class="particula" style="left:85%; width:3px; height:3px; animation-duration:18s; animation-delay:-11s;"></div>
-  <div class="particula" style="left:88%; width:1px; height:1px; animation-duration:14s; animation-delay:-4s;"></div>
-  <div class="particula" style="left:91%; animation-duration:20s; animation-delay:-13s;"></div>
-  <div class="particula" style="left:94%; width:2px; height:2px; animation-duration:22s; animation-delay:-8s;"></div>
-
-</div>
-
-  <!-- GLITCH -->
   <div class="glitch-global"></div>
 
   <div class="marco">
     <div class="hoja">
-
-      <!-- TÍTULO DENTRO DEL MARCO -->
-      <div class="titulo-marco">ARCHIVO VISUAL / ANIMACIÓN EXPERIMENTAL</div>
 
       <div class="bloque-central">
         <img src="img/polilla.png" class="polilla" alt="Polilla">
@@ -282,21 +245,20 @@
         <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
 
         <div class="menu">
-          <!-- MENÚ -->
-           <a href="error_404.html">ERROR_404</a>
-           <a href="la_noche.html">LA NOCHE</a>
-           <a href="deterioro.html">DETERIORO</a>
-           <a href="tren.html">TREN</a>
-           <a href="instalacion.html">INSTALACIÓN</a>
-           <a href="sobre_mi.html">SOBRE MÍ</a>
-</div>
-
+          <a href="error_404.html">ERROR_404</a>
+          <a href="la_noche.html">LA NOCHE</a>
+          <a href="deterioro.html">DETERIORO</a>
+          <a href="tren.html">TREN</a>
+          <a href="instalacion.html">INSTALACIÓN</a>
+          <a href="sobre_mi.html">SOBRE MÍ</a>
         </div>
+
       </div>
 
     </div>
   </div>
 
 </body>
-</html> este es el index 
+</html>
+
 
