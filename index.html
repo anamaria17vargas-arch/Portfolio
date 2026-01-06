@@ -2,11 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>ARCHIVO</title>
-
-  <!-- Open Graph / Social Preview -->
+  
+   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Ana María Vargas — Portafolio" />
   <meta property="og:description" content="Animación 2D, instalación audiovisual y experimentación digital." />
   <meta property="og:image" content="https://anamaria17vargas-arch.github.io/Portfolio/preview.gif" />
@@ -18,12 +16,12 @@
   <meta name="twitter:title" content="Ana María Vargas — Portafolio" />
   <meta name="twitter:description" content="Animación experimental y archivo visual." />
   <meta name="twitter:image" content="https://anamaria17vargas-arch.github.io/Portfolio/preview.gif" />
-
+  
   <style>
     body {
       margin: 0;
       background: black;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,13 +56,14 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background: repeating-linear-gradient(
-        0deg,
-        rgba(255,255,255,0.02),
-        rgba(255,255,255,0.02) 1px,
-        transparent 1px,
-        transparent 2px
-      );
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.02) 1px,
+          transparent 1px,
+          transparent 2px
+        );
       opacity: 0.12;
       animation: scan 8s linear infinite;
       mix-blend-mode: overlay;
@@ -78,9 +77,9 @@
 
     /* ===== MARCO ===== */
     .marco {
-      width: 1200px;           /* FIJO PARA PC */
-      max-width: 90%;          /* SE ADAPTA EN PANTALLAS MENORES */
-      height: auto;
+      width: 90vw;
+      height: 90vh;
+      background-color: #0d0d0d;
       padding: 22px;
       box-sizing: border-box;
       border: 1px dotted white;
@@ -88,34 +87,61 @@
       z-index: 2;
     }
 
+    .marco::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px dotted rgba(255,255,255,0.4);
+      pointer-events: none;
+    }
+
+    .marco::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      opacity: 0.07;
+      pointer-events: none;
+      mix-blend-mode: overlay;
+      animation: ruido 3s steps(2) infinite;
+    }
+
+    @keyframes ruido {
+      0% { transform: translate(0,0); }
+      50% { transform: translate(-1px,1px); }
+      100% { transform: translate(0,0); }
+    }
+
+    /* ===== HOJA ===== */
     .hoja {
       width: 100%;
-      height: auto;
+      height: 100%;
       background: black;
       border: 1px dotted white;
       position: relative;
       overflow: hidden;
-      padding: 10px;
-      box-sizing: border-box;
     }
 
     /* ===== BLOQUE CENTRAL ===== */
     .bloque-central {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
     }
 
     .polilla {
-      width: 420px;           /* CONTROL REAL DE TAMAÑO */
-      max-width: 100%;
-      height: auto;
+      width: 60vw;
+      max-width: 650px;
       image-rendering: pixelated;
       opacity: 0.95;
       animation: microglitch 14s infinite steps(1);
       display: block;
-      margin: 10px auto;
+      margin: 0 auto;
+      /* ===== GLOW ===== */
       filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+
     }
 
     @keyframes microglitch {
@@ -123,6 +149,18 @@
       97%  { transform: translate(0,0); }
       98%  { transform: translate(-1px,1px); }
       100% { transform: translate(0,0); }
+    }
+
+    /* ===== TEXTOS PRINCIPALES ===== */
+    .titulo-marco {
+      text-align: left;      /* alineación a la izquierda */
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.7);
+      font-family: "Courier New", monospace;
+      margin-top: 10px;      /* bajado dentro del marco */
+      margin-left: 10px;     /* margen desde el borde izquierdo */
+      margin-bottom: 20px;
     }
 
     .entrada {
@@ -133,17 +171,25 @@
       color: white;
     }
 
+    .porcelanita {
+      font-size: 14px;
+      letter-spacing: 4px;
+      margin: 5px 0;
+      color: white;
+      font-family: "Times New Roman", Georgia, serif;
+    }
+
     .nombre {
       font-size: 16px;
       letter-spacing: 2px;
       margin: 5px 0;
       color: white;
       font-family: "Times New Roman", Georgia, serif;
-      font-weight: bold;     /* NOMBRE EN NEGRITA COMO PEDISTE */
     }
 
     .registro {
       font-size: 12px;
+      letter-spacing: 1px;
       margin-bottom: 20px;
       color: rgba(255,255,255,0.7);
       font-family: "Courier New", monospace;
@@ -155,7 +201,6 @@
       justify-content: center;
       gap: 18px;
       flex-wrap: wrap;
-      margin-bottom: 10px;
     }
 
     .menu a {
@@ -173,72 +218,59 @@
       background: black;
       color: white;
     }
-
-    /* ==============================
-       ✦ SOLO PANTALLAS PEQUEÑAS PC
-       ============================== */
-    @media (max-width: 1366px) {
-      .marco {
-        width: 1000px;
-      }
-
-      .polilla {
-        width: 360px;
-      }
-    }
-
-    /* ==============================
-       ✦ SOLO CELULAR
-       ============================== */
-    @media (max-width: 768px) {
-
-      body {
-        overflow-y: auto;
-      }
-
-      .marco {
-        margin-top: 20px;
-      }
-
-      .polilla {
-        width: 280px;      /* MAS PEQUEÑA EN CELULAR */
-        margin-top: 20px;
-      }
-
-      .entrada {
-        font-size: 18px;
-        letter-spacing: 3px;
-      }
-
-      .nombre {
-        font-size: 14px;
-      }
-
-      .menu {
-        gap: 10px;
-      }
-
-      .menu a {
-        font-size: 10px;
-        padding: 8px 12px;
-      }
-    }
-
   </style>
 </head>
 
 <body>
 
+  <!-- PARTÍCULAS -->
   <div class="particulas">
-    <!-- tus partículas igual -->
-    <div class="particula" style="left:2%; animation-duration:16s; animation-delay:-3s;"></div>
-  </div>
 
+  <div class="particula" style="left:2%; animation-duration:16s; animation-delay:-3s;"></div>
+  <div class="particula" style="left:5%; width:1px; height:1px; animation-duration:18s; animation-delay:-9s;"></div>
+  <div class="particula" style="left:8%; width:2px; height:2px; animation-duration:14s; animation-delay:-5s;"></div>
+  <div class="particula" style="left:11%; animation-duration:20s; animation-delay:-12s;"></div>
+  <div class="particula" style="left:14%; width:1px; height:1px; animation-duration:22s; animation-delay:-7s;"></div>
+
+  <div class="particula" style="left:18%; animation-duration:16s; animation-delay:-10s;"></div>
+  <div class="particula" style="left:21%; width:3px; height:3px; animation-duration:18s; animation-delay:-4s;"></div>
+  <div class="particula" style="left:24%; width:1px; height:1px; animation-duration:14s; animation-delay:-8s;"></div>
+  <div class="particula" style="left:27%; animation-duration:20s; animation-delay:-15s;"></div>
+  <div class="particula" style="left:30%; width:2px; height:2px; animation-duration:22s; animation-delay:-6s;"></div>
+
+  <div class="particula" style="left:34%; animation-duration:16s; animation-delay:-11s;"></div>
+  <div class="particula" style="left:37%; width:1px; height:1px; animation-duration:18s; animation-delay:-5s;"></div>
+  <div class="particula" style="left:40%; width:3px; height:3px; animation-duration:14s; animation-delay:-9s;"></div>
+  <div class="particula" style="left:43%; animation-duration:20s; animation-delay:-13s;"></div>
+  <div class="particula" style="left:46%; width:1px; height:1px; animation-duration:22s; animation-delay:-7s;"></div>
+
+  <div class="particula" style="left:50%; animation-duration:16s; animation-delay:-4s;"></div>
+  <div class="particula" style="left:53%; width:2px; height:2px; animation-duration:18s; animation-delay:-10s;"></div>
+  <div class="particula" style="left:56%; width:1px; height:1px; animation-duration:14s; animation-delay:-6s;"></div>
+  <div class="particula" style="left:59%; animation-duration:20s; animation-delay:-14s;"></div>
+  <div class="particula" style="left:62%; width:3px; height:3px; animation-duration:22s; animation-delay:-8s;"></div>
+
+  <div class="particula" style="left:66%; animation-duration:16s; animation-delay:-12s;"></div>
+  <div class="particula" style="left:69%; width:1px; height:1px; animation-duration:18s; animation-delay:-5s;"></div>
+  <div class="particula" style="left:72%; width:2px; height:2px; animation-duration:14s; animation-delay:-9s;"></div>
+  <div class="particula" style="left:75%; animation-duration:20s; animation-delay:-15s;"></div>
+  <div class="particula" style="left:78%; width:1px; height:1px; animation-duration:22s; animation-delay:-7s;"></div>
+
+  <div class="particula" style="left:82%; animation-duration:16s; animation-delay:-6s;"></div>
+  <div class="particula" style="left:85%; width:3px; height:3px; animation-duration:18s; animation-delay:-11s;"></div>
+  <div class="particula" style="left:88%; width:1px; height:1px; animation-duration:14s; animation-delay:-4s;"></div>
+  <div class="particula" style="left:91%; animation-duration:20s; animation-delay:-13s;"></div>
+  <div class="particula" style="left:94%; width:2px; height:2px; animation-duration:22s; animation-delay:-8s;"></div>
+
+</div>
+
+  <!-- GLITCH -->
   <div class="glitch-global"></div>
 
   <div class="marco">
     <div class="hoja">
 
+      <!-- TÍTULO DENTRO DEL MARCO -->
       <div class="titulo-marco">ARCHIVO VISUAL / ANIMACIÓN EXPERIMENTAL</div>
 
       <div class="bloque-central">
@@ -246,25 +278,24 @@
 
         <div class="entrada">INICIO</div>
         <div class="porcelanita">PORCELANITA</div>
-
         <div class="nombre">ANA MARÍA VARGAS</div>
-
         <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
 
         <div class="menu">
-          <a href="error_404.html">ERROR_404</a>
-          <a href="la_noche.html">LA NOCHE</a>
-          <a href="deterioro.html">DETERIORO</a>
-          <a href="tren.html">TREN</a>
-          <a href="instalacion.html">INSTALACIÓN</a>
-          <a href="sobre_mi.html">SOBRE MÍ</a>
-        </div>
+          <!-- MENÚ -->
+           <a href="error_404.html">ERROR_404</a>
+           <a href="la_noche.html">LA NOCHE</a>
+           <a href="deterioro.html">DETERIORO</a>
+           <a href="tren.html">TREN</a>
+           <a href="instalacion.html">INSTALACIÓN</a>
+           <a href="sobre_mi.html">SOBRE MÍ</a>
+</div>
 
+        </div>
       </div>
 
     </div>
   </div>
 
 </body>
-</html>
-
+</html> 
