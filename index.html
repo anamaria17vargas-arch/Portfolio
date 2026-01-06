@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+puedes agregar ese codigo del menu y tamaño de los botones, a este: <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -78,8 +78,8 @@
 
     /* ===== MARCO ===== */
     .marco {
-      width: 1200px;
-      max-width: 90%;
+      width: 1200px;           /* FIJO PARA PC */
+      max-width: 90%;          /* SE ADAPTA EN PANTALLAS MENORES */
       height: auto;
       padding: 22px;
       box-sizing: border-box;
@@ -99,10 +99,30 @@
       box-sizing: border-box;
     }
 
+    /* ===== BLOQUE CENTRAL ===== */
     .bloque-central {
       text-align: center;
       max-width: 900px;
       margin: 0 auto;
+    }
+
+    .polilla {
+      width: 420px;           /* CONTROL REAL DE TAMAÑO */
+      max-width: 100%;
+      height: auto;
+      image-rendering: pixelated;
+      opacity: 0.95;
+      animation: microglitch 14s infinite steps(1);
+      display: block;
+      margin: 10px auto;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+    }
+
+    @keyframes microglitch {
+      0%   { transform: translate(0,0); }
+      97%  { transform: translate(0,0); }
+      98%  { transform: translate(-1px,1px); }
+      100% { transform: translate(0,0); }
     }
 
     .entrada {
@@ -119,7 +139,7 @@
       margin: 5px 0;
       color: white;
       font-family: "Times New Roman", Georgia, serif;
-      font-weight: bold;
+      font-weight: bold;     /* NOMBRE EN NEGRITA COMO PEDISTE */
     }
 
     .registro {
@@ -129,27 +149,24 @@
       font-family: "Courier New", monospace;
     }
 
-    /* ========== ✦ MENÚ CORREGIDO ✦ ========== */
-
+    /* ===== MENÚ ===== */
     .menu {
       display: flex;
-      flex-direction: column;   /* uno debajo de otro */
-      align-items: center;
-      gap: 10px;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
       margin-bottom: 10px;
     }
 
     .menu a {
       background: white;
       color: black;
-      padding: 6px 10px;       /* botones más pequeños */
+      padding: 10px 18px;
       text-decoration: none;
-      font-size: 10px;
-      letter-spacing: 1px;
+      font-size: 11px;
+      letter-spacing: 2px;
       font-family: "Times New Roman", Georgia, serif;
       border: 1px dotted white;
-      width: 160px;
-      text-align: center;
     }
 
     .menu a:hover {
@@ -157,26 +174,53 @@
       color: white;
     }
 
-    /* ============================== */
+    /* ==============================
+       ✦ SOLO PANTALLAS PEQUEÑAS PC
+       ============================== */
     @media (max-width: 1366px) {
-      .marco { width: 1000px; }
-      .polilla { width: 360px; }
+      .marco {
+        width: 1000px;
+      }
+
+      .polilla {
+        width: 360px;
+      }
     }
 
+    /* ==============================
+       ✦ SOLO CELULAR
+       ============================== */
     @media (max-width: 768px) {
 
-      body { overflow-y: auto; }
+      body {
+        overflow-y: auto;
+      }
 
-      .polilla { width: 280px; }
+      .marco {
+        margin-top: 20px;
+      }
+
+      .polilla {
+        width: 280px;      /* MAS PEQUEÑA EN CELULAR */
+        margin-top: 20px;
+      }
 
       .entrada {
         font-size: 18px;
         letter-spacing: 3px;
       }
 
+      .nombre {
+        font-size: 14px;
+      }
+
+      .menu {
+        gap: 10px;
+      }
+
       .menu a {
-        font-size: 9px;
-        width: 150px;
+        font-size: 10px;
+        padding: 8px 12px;
       }
     }
 
@@ -186,13 +230,14 @@
 <body>
 
   <div class="particulas">
+    <!-- tus partículas igual -->
     <div class="particula" style="left:2%; animation-duration:16s; animation-delay:-3s;"></div>
   </div>
 
   <div class="glitch-global"></div>
 
   <div class="marco">
-    <div class="hoja>
+    <div class="hoja">
 
       <div class="titulo-marco">ARCHIVO VISUAL / ANIMACIÓN EXPERIMENTAL</div>
 
@@ -222,4 +267,3 @@
 
 </body>
 </html>
-
