@@ -204,6 +204,73 @@
       background: black;
       color: white;
     }
+    /* ===== MAPA DEL ARCHIVO ===== */
+
+.mapa-archivo {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+}
+
+.categoria {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.categoria-titulo {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 10px 18px;
+  border: 1px dotted white;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-family: "Times New Roman", Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.obras {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.obras a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.obras a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.sobre-mi-link {
+  margin-top: 15px;
+}
+
+.sobre-mi-link a {
+  background: white;
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  border: 1px dotted white;
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+.sobre-mi-link a:hover {
+  background: black;
+  color: white;
+}
 
     /* =====================================
        ✦ SOLO PC DE PANTALLA MÁS PEQUEÑA
@@ -281,11 +348,39 @@
         <div class="nombre">ANA MARÍA VARGAS</div>
         <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
 
-        <div class="menu">
-  <a href="animacion3d.html">ANIMACIÓN 3D</a>
-  <a href="animacion2d.html">ANIMACIÓN 2D</a>
-  <a href="instalaciones.html">INSTALACIÓN AUDIOVISUAL</a>
-  <a href="sobre_mi.html">SOBRE MÍ</a>
+        <div class="mapa-archivo">
+
+  <div class="categoria">
+    <div class="categoria-titulo">ANIMACIÓN 3D</div>
+
+    <div class="obras">
+      <a href="la_noche.html">LA NOCHE</a>
+      <a href="error_404.html">ERROR_404</a>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <div class="categoria-titulo">ANIMACIÓN 2D</div>
+
+    <div class="obras">
+      <a href="tren.html">TREN</a>
+      <a href="deterioro.html">DETERIORO</a>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <div class="categoria-titulo">INSTALACIÓN AUDIOVISUAL</div>
+
+    <div class="obras">
+      <a href="paisaje_digital.html">PAISAJE DIGITAL</a>
+      <a href="polanima.html">POLANIMA</a>
+    </div>
+  </div>
+
+  <div class="sobre-mi-link">
+    <a href="sobre_mi.html">SOBRE MÍ</a>
+  </div>
+
 </div>
 
       </div>
