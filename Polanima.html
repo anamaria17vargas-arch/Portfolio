@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>POLANIMA</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== ETIQUETAS ===== */
+.etiquetas {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+
+.etiquetas span {
+  background: white;
+  color: black;
+  padding: 6px 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-family: "Times New Roman", Georgia, serif;
+  border: 1px dotted white;
+}
+
+/* ===== TÍTULO PIXEL ===== */
+.titulo-video {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 22px;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.6),
+    0 0 8px rgba(255,255,255,0.3);
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.descripcion {
+  width: 70%;
+  max-width: 800px;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  text-align: left;
+  margin: 20px 0;
+}
+
+/* ===== IMÁGENES ===== */
+.imagenes-polanima {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 70%;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.imagenes-polanima img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== MAPA DEL ARCHIVO ===== */
+
+.mapa-archivo {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.categoria {
+  text-align: center;
+}
+
+.categoria-titulo {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 8px 14px;
+  border: 1px dotted white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-family: "Times New Roman", Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.obras {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.obras a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.obras a:hover {
+  color: white;
+}
+
+.sobre-mi-link a {
+  background: white;
+  color: black;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border: 1px dotted white;
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="marco">
+<div class="hoja">
+
+<div class="titulo-marco">
+ARCHIVO VISUAL / ANIMACIÓN EXPERIMENTAL
+</div>
+
+<div class="etiquetas">
+  <span>PROYECCIÓN</span>
+  <span>INSTALACIÓN AUDIOVISUAL</span>
+</div>
+
+<div class="contenido">
+
+<div class="titulo-video">
+POLANIMA
+</div>
+
+<div class="decoracion">
+• · • · • · • · • · • · • · • · • · •
+</div>
+
+<div class="descripcion">
+
+<p>
+Polanima hace parte de una de las tres piezas que conforman la instalación audiovisual
+<i>Espectros Urbanos</i>, cuyo origen surge de una investigación acerca de las huellas y memorias nocturnas del barrio Carlos E. Restrepo.
+</p>
+
+<p>
+La pieza propone una proyección sobre objetos tridimensionales, en este caso botellas de cerveza previamente intervenidas para optimizar la visibilidad de la imagen proyectada. Las animaciones fueron realizadas en técnica digital 2D y posteriormente integradas y postproducidas en TouchDesigner.
+</p>
+
+<p>
+A través de la fragmentación de la imagen y su adaptación a múltiples superficies, la obra explora la relación entre memoria, espacio urbano y materialidad de la proyección.
+</p>
+
+</div>
+
+<div class="imagenes-polanima">
+
+<img src="img/polanima1.jpg">
+<img src="img/polanima2.jpg">
+<img src="img/polanima3.jpg">
+<img src="img/polanima4.jpg">
+
+</div>
+
+<div class="descripcion">
+
+<p><strong>Programas utilizados:</strong></p>
+
+<ul>
+<li>Krita</li>
+<li>TouchDesigner</li>
+</ul>
+
+<p><strong>Conceptos:</strong></p>
+
+<ul>
+<li>Projection Mapping</li>
+<li>Memoria urbana</li>
+<li>Narrativa expandida</li>
+<li>Instalación audiovisual</li>
+</ul>
+
+</div>
+
+<div class="mapa-archivo">
+
+  <div class="categoria">
+    <div class="categoria-titulo">ANIMACIÓN 3D</div>
+
+    <div class="obras">
+      <a href="la_noche.html">LA_NOCHE</a>
+      <a href="error_404.html">ERROR_404</a>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <div class="categoria-titulo">ANIMACIÓN 2D</div>
+
+    <div class="obras">
+      <a href="tren.html">TREN</a>
+      <a href="deterioro.html">DETERIORO</a>
+    </div>
+  </div>
+
+  <div class="categoria">
+    <div class="categoria-titulo">INSTALACIÓN AUDIOVISUAL</div>
+
+    <div class="obras">
+      <a href="paisaje_digital.html">PAISAJE_DIGITAL</a>
+      <a href="polanima.html">POLANIMA</a>
+    </div>
+  </div>
+
+  <div class="sobre-mi-link">
+    <a href="sobre_mi.html">SOBRE_MÍ</a>
+  </div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
