@@ -275,15 +275,83 @@
        ✦ SOLO PC DE PANTALLA MÁS PEQUEÑA
        (sin tocar celular ni PC grande)
        ===================================== */
- @media (max-width:768px){
+@media (max-width:768px){
 
+  /* marco más grande */
+  .marco{
+    width:96vw;
+    height:96vh;
+    padding:12px;
+  }
+
+  /* permitir scroll si hace falta */
+  .hoja{
+    overflow-y:auto;
+  }
+
+  /* bajar un poquito el bloque */
+  .bloque-central{
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+
+    width:100%;
+    padding:20px 0 40px;
+  }
+
+  /* polilla más pequeña */
+  .polilla{
+    width:75vw;
+    max-width:320px;
+  }
+
+  /* textos */
+  .entrada{
+    font-size:18px;
+    letter-spacing:4px;
+  }
+
+  .porcelanita{
+    font-size:12px;
+    letter-spacing:3px;
+  }
+
+  .nombre{
+    font-size:13px;
+  }
+
+  .registro{
+    font-size:10px;
+  }
+
+  /* menú vertical */
   .mapa-archivo{
     flex-direction:column;
+    align-items:center;
+    gap:20px;
   }
 
-  .polilla {
-    max-width: 480px;
+  .categoria{
+    min-width:auto;
+    width:90%;
   }
+
+  .categoria-titulo{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .obras{
+    margin-top:8px;
+  }
+
+  /* botón sobre mí */
+  .sobre-mi-link{
+    margin-top:20px;
+  }
+
+}
 
 }
 
