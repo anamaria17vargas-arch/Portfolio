@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARCHIVO</title>
   
   <!-- Open Graph / Social Preview -->
@@ -326,16 +327,24 @@
   }
 
   /* menú vertical */
+  @media (max-width:768px){
+
   .mapa-archivo{
     flex-direction:column;
     align-items:center;
-    gap:20px;
+    gap:25px;
   }
 
   .categoria{
     min-width:auto;
-    width:90%;
+    width:100%;
   }
+
+  .sobre-mi-link{
+    margin-top:25px;
+  }
+
+}
 
   .categoria-titulo{
     width:100%;
