@@ -196,12 +196,12 @@ body {
 }
 
 .fila-3 img {
-  width: 450px;
+  width: 460px;
   height: auto;
 }
 
 .fila-pequena img {
-  width: 250px;
+  width: 230px;
 }
 
 .imagenes-polanima img {
@@ -315,16 +315,13 @@ body {
 .pie-video {
   width: 78%;
   max-width: 950px;
-  box-sizing: border-box;
 
   margin-top: 10px;
   margin-bottom: 20px;
 
-  text-align: left;
-
   font-family: "Courier New", monospace;
   font-size: 11px;
-  letter-spacing: 1px; /* antes 2px */
+  letter-spacing: 1px;
   line-height: 1.5;
 
   color: rgba(255,255,255,0.55);
@@ -332,8 +329,10 @@ body {
   border-left: 1px dotted rgba(255,255,255,0.3);
   padding-left: 10px;
 
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  box-sizing: border-box;
+
+  /* NUEVO */
+  align-self: center;
 }
   
 .pie-fila {
