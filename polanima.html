@@ -190,23 +190,22 @@ body {
 }
 
 .fila-3 img {
-  width: 220px;
+  width: 250px;
   height: auto;
 }
 
 .fila-2 img {
-  width: 320px;
+  width: 340px;
   height: auto;
 }
 
 .fila-1 img {
-  width: 320px;
+  width: 340px;
   height: auto;
 }
 
 .imagenes-polanima img {
   display: block;
-  border: 1px dotted rgba(255,255,255,0.3);
 }
   
 /* ===== MENÚ ===== */
@@ -298,15 +297,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-  margin-bottom: 30px;
+  gap: 35px;
+  margin-bottom: 40px;
 }
 
+.video-item {
+  width: 100%;
+  text-align: center;
+}
+
+.videos-verticales video {
+  width: 78%;
+  max-width: 950px;
+  background: black;
+}
+
+.pie-video {
+  margin-top: 10px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.55);
+}
+  
 .videos-verticales video {
   width: 70%;
   max-width: 800px;
   background: black;
 }
+  
+.pie-fila {
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.55);
+}
+  
 </style>
 </head>
 
@@ -342,10 +371,29 @@ body {
 
       <!-- VIDEOS (TODOS CONSERVADOS) -->
       <div class="videos-verticales">
-        <video controls autoplay loop muted><source src="videos/polanimavideo1.mp4"></video>
-        <video controls autoplay loop muted><source src="videos/polanimavideo2.mp4"></video>
-        <video controls autoplay loop muted><source src="videos/polanimavideo3.mp4"></video>
-      </div>
+
+  <div class="video-item">
+    <video controls autoplay loop muted>
+      <source src="videos/polanimavideo1.mp4">
+    </video>
+    <p class="pie-video">Turn around y animaciones 2D de Polanima</p>
+  </div>
+
+  <div class="video-item">
+    <video controls autoplay loop muted>
+      <source src="videos/polanimavideo3.mp4">
+    </video>
+    <p class="pie-video">Prueba de animación</p>
+  </div>
+
+  <div class="video-item">
+    <video controls autoplay loop muted>
+      <source src="videos/polanimavideo2.mp4">
+    </video>
+    <p class="pie-video">Proyección final sobre la estructura</p>
+  </div>
+
+</div>
 
       <!-- DECORACIÓN INFERIOR (NUEVA) -->
       <div class="decoracion">
@@ -360,9 +408,13 @@ body {
     <img src="img/polanima8.png">
   </div>
 
-  <div class="fila-1">
-    <img src="img/polanima7.png">
-  </div>
+  <div class="fila-1 fila-grande">
+  <img src="img/polanima6.png">
+</div>
+       
+.fila-grande img {
+  width: 420px;
+}
 
   <div class="fila-3">
     <img src="img/polanima3.jpeg">
@@ -370,14 +422,26 @@ body {
     <img src="img/polanima5.jpeg">
   </div>
 
-  <div class="fila-2">
-    <img src="img/polanima1.jpeg">
-    <img src="img/polanima2.jpeg">
-  </div>
+  <div class="fila-2 fila-pequena">
+  <img src="img/polanima1.jpeg">
+  <img src="img/polanima2.jpeg">
+</div>
+
+<p class="pie-fila">
+  Experimentaciones de proyección
+</p>
+       
+  .fila-pequena img {
+  width: 240px;
+}
 
   <div class="fila-1">
     <img src="img/polanima6.png">
   </div>
+
+       <p class="pie-fila">
+  Huellas recolectadas y animadas proceduralmente en Touch
+</p>
 
 </div>
 
