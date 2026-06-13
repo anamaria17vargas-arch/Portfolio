@@ -309,38 +309,29 @@
   .registro{ font-size:10px; }
 
   /* ===== MAPA ARCHIVO MOBILE FIX ===== */
+   /* 👇 ESTO AHORA SÍ FUNCIONA */
   .mapa-archivo{
     flex-direction:column;
     align-items:center;
-    gap:18px;
-    margin-top:15px;
+    gap:20px;
   }
 
   .categoria{
     width:100%;
-    max-width:260px; /* 👈 CLAVE: evita que se estire */
-    text-align:center;
   }
 
   .categoria-titulo{
-    display:inline-block;
-    width:auto;            /* 👈 evita full width */
-    max-width:100%;
-    padding:8px 14px;      /* 👈 más compacto */
-    font-size:10px;
-    letter-spacing:2px;
+    width:100%;
+    box-sizing:border-box;
   }
 
-  .obras a{
-    font-size:11px;
-    letter-spacing:1.5px;
+  .obras{
+    margin-top:8px;
   }
 
-  .sobre-mi-link a{
-    font-size:10px;
-    padding:8px 14px;
+  .sobre-mi-link{
+    margin-top:20px;
   }
-}
 }
 
   </style>
