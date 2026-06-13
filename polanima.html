@@ -315,7 +315,9 @@ body {
 
 .pie-video {
   width: 85%;
-  max-width: 1300px;
+  max-width: 1000px;
+  box-sizing: border-box;
+
   margin-top: 10px;
   margin-bottom: 20px;
 
@@ -323,12 +325,18 @@ body {
 
   font-family: "Courier New", monospace;
   font-size: 11px;
-  letter-spacing: 2px;
+  letter-spacing: 1px; /* antes 2px */
+  line-height: 1.5;
+
   color: rgba(255,255,255,0.55);
 
   border-left: 1px dotted rgba(255,255,255,0.3);
   padding-left: 10px;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
+  
 .videos-verticales video {
   width: 70%;
   max-width: 800px;
