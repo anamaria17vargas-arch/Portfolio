@@ -172,13 +172,34 @@ body {
 .descripcion ul { padding-left: 18px; }
 
 /* ===== IMÁGENES ===== */
-.imagenes-polanima {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.imagenes-polanima{
   width: 80%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin-bottom: 40px;
+}
+
+.fila-dos,
+.fila-tres,
+.fila-uno{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+.fila-dos img{
+  width:45%;
+  max-width:420px;
+}
+
+.fila-tres img{
+  width:30%;
+  max-width:300px;
+}
+
+.fila-uno img{
+  width:50%;
+  max-width:500px;
 }
 
 .imagenes-polanima img {
@@ -334,16 +355,36 @@ body {
       <!-- IMÁGENES -->
      <div class="imagenes-polanima">
 
-<img src="img/polanima1.jpeg">
-<img src="img/polanima2.jpeg">
-<img src="img/polanima3.jpeg">
-<img src="img/polanima4.jpeg">
-<img src="img/polanima5.jpeg">
-<img src="img/polanima6.png">
-<img src="img/polanima7.png">
-<img src="img/polanima8.png">
-<img src="img/polanima9.png">
-      </div>
+  <!-- fila 1 -->
+  <div class="fila-dos">
+    <img src="img/polanima9.jpeg">
+    <img src="img/polanima8.jpeg">
+  </div>
+
+  <!-- fila 2 -->
+  <div class="fila-uno">
+    <img src="img/polanima7.jpeg">
+  </div>
+
+  <!-- fila 3 -->
+  <div class="fila-tres">
+    <img src="img/polanima3.jpeg">
+    <img src="img/polanima4.jpeg">
+    <img src="img/polanima5.jpeg">
+  </div>
+
+  <!-- fila 4 -->
+  <div class="fila-dos">
+    <img src="img/polanima1.jpeg">
+    <img src="img/polanima2.jpeg">
+  </div>
+
+  <!-- fila 5 -->
+  <div class="fila-uno">
+    <img src="img/polanima6.jpeg">
+  </div>
+
+</div>
 
       <div class="descripcion">
         <p><strong>Programas utilizados:</strong></p>
