@@ -335,7 +335,9 @@
   .sobre-mi-link{
     margin-top:20px;
   }
-  /* ===== INTRO SOLO CELULAR ===== */
+}
+
+/* ===== INTRO SOLO CELULAR ===== */
 
 @media (max-width:768px){
 
@@ -398,7 +400,7 @@
     opacity:0;
     transition:opacity 1.5s ease;
   }
-}
+    
 }
 
   </style>
@@ -524,41 +526,25 @@ if(window.innerWidth <= 768){
   const intro = document.getElementById("intro-mobile");
   const estado = document.getElementById("estado-mobile");
   const contenido = document.getElementById("contenido-principal");
+  const menu = document.getElementById("archivo-menu");
 
   contenido.style.display = "none";
 
-  setTimeout(() => {
+ setTimeout(() => {
 
-    intro.style.opacity = "0";
+  estado.style.display = "none";
 
-  }, 2500);
-
-  setTimeout(() => {
-
-    intro.style.display = "none";
-
-    estado.style.opacity = "1";
-
-  }, 3500);
+  contenido.style.display = "block";
 
   setTimeout(() => {
 
-    estado.style.opacity = "0";
+    contenido.style.opacity = "1";
 
-  }, 5000);
+    menu.classList.add("visible");
 
-  setTimeout(() => {
+  }, 50);
 
-    estado.style.display = "none";
-
-    contenido.style.display = "block";
-
-    setTimeout(() => {
-      contenido.style.opacity = "1";
-    }, 50);
-
-  }, 6000);
-
+}, 6000);
 }
 
 </script>
