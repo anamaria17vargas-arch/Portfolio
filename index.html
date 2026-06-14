@@ -279,10 +279,10 @@
 @media (max-width:768px){
 
   .marco{
-    width:96vw;
-    height:96vh;
-    padding:12px;
-  }
+  width:98vw;
+  height:98vh;
+  padding:8px;
+}
 
   .hoja{
     overflow-y:auto;
@@ -335,6 +335,32 @@
   .sobre-mi-link{
     margin-top:20px;
   }
+  /* ===== INTRO SOLO CELULAR ===== */
+
+@media (max-width:768px){
+
+  #archivo-menu{
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 1.2s ease;
+  }
+
+  #archivo-menu.visible{
+    opacity:1;
+    visibility:visible;
+  }
+
+  #estado-archivo{
+    opacity:0;
+    margin-top:15px;
+    margin-bottom:20px;
+    font-family:"Courier New", monospace;
+    font-size:10px;
+    letter-spacing:2px;
+    color:rgba(255,255,255,0.8);
+    transition:opacity 1s ease;
+  }
+}
 }
 
   </style>
@@ -396,6 +422,9 @@
         <div class="nombre">ANA MARÍA VARGAS_</div>
         <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
 
+        <div id="estado-archivo"></div>
+        
+        <div id="archivo-menu">
         <div class="mapa-archivo">
 
   <div class="categoria">
@@ -430,11 +459,39 @@
 <div class="sobre-mi-link">
   <a href="sobre_mi.html">SOBRE MÍ</a>
 </div>
+</div>
 
       </div>
 
     </div>
   </div>
+<script>
+
+window.addEventListener("load", () => {
+
+  if(window.innerWidth <= 768){
+
+    const estado = document.getElementById("estado-archivo");
+    const menu = document.getElementById("archivo-menu");
+
+    setTimeout(() => {
+
+      estado.textContent = "ARCHIVO RECUPERADO";
+      estado.style.opacity = "1";
+
+    }, 3500);
+
+    setTimeout(() => {
+
+      menu.classList.add("visible");
+
+    }, 4500);
+
+  }
+
+});
+
+</script>
 
 </body>
 </html>
