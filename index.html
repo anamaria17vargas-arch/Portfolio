@@ -361,6 +361,44 @@
     transition:opacity 1s ease;
   }
 }
+  @media (max-width:768px){
+
+  #intro-mobile{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    transition:opacity 1s ease;
+  }
+
+  #estado-mobile{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    font-family:"Courier New", monospace;
+    letter-spacing:3px;
+    font-size:11px;
+
+    transition:opacity 1s ease;
+  }
+
+  #contenido-principal{
+    opacity:0;
+    transition:opacity 1.5s ease;
+  }
+}
 }
 
   </style>
@@ -415,13 +453,27 @@
     <div class="hoja">
 
       <div class="bloque-central">
-        <img src="img/polilla.png" class="polilla" alt="Polilla">
+        <div id="intro-mobile">
 
+  <img src="img/polilla.png" class="polilla" alt="Polilla">
+
+  <div class="entrada">INICIO</div>
+  <div class="porcelanita">PORCELANITA</div>
+  <div class="nombre">ANA MARÍA VARGAS_</div>
+
+</div>
+
+<div id="estado-mobile">
+  ARCHIVO RECUPERADO_
+</div>
+        <div id="contenido-principal">
+        <img src="img/polilla.png" class="polilla" alt="Polilla">
         <div class="entrada">INICIO</div>
         <div class="porcelanita">PORCELANITA</div>
         <div class="nombre">ANA MARÍA VARGAS_</div>
         <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
-
+</div> <!-- bloque-central -->
+        
         <div id="estado-archivo"></div>
         
         <div id="archivo-menu">
@@ -467,29 +519,47 @@
   </div>
 <script>
 
-window.addEventListener("load", () => {
+if(window.innerWidth <= 768){
 
-  if(window.innerWidth <= 768){
+  const intro = document.getElementById("intro-mobile");
+  const estado = document.getElementById("estado-mobile");
+  const contenido = document.getElementById("contenido-principal");
 
-    const estado = document.getElementById("estado-archivo");
-    const menu = document.getElementById("archivo-menu");
+  contenido.style.display = "none";
+
+  setTimeout(() => {
+
+    intro.style.opacity = "0";
+
+  }, 2500);
+
+  setTimeout(() => {
+
+    intro.style.display = "none";
+
+    estado.style.opacity = "1";
+
+  }, 3500);
+
+  setTimeout(() => {
+
+    estado.style.opacity = "0";
+
+  }, 5000);
+
+  setTimeout(() => {
+
+    estado.style.display = "none";
+
+    contenido.style.display = "block";
 
     setTimeout(() => {
+      contenido.style.opacity = "1";
+    }, 50);
 
-      estado.textContent = "ARCHIVO RECUPERADO";
-      estado.style.opacity = "1";
+  }, 6000);
 
-    }, 3500);
-
-    setTimeout(() => {
-
-      menu.classList.add("visible");
-
-    }, 4500);
-
-  }
-
-});
+}
 
 </script>
 
