@@ -121,8 +121,24 @@
       border: 1px dotted white;
       position: relative;
       overflow: hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
+    
+#contenido-principal{
+  width:100%;
+  min-height:100%;
 
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+    
     /* ===== BLOQUE CENTRAL ===== */
     .polilla {
       width: 45vw;
@@ -377,20 +393,9 @@
 
   text-align:center;
   z-index:40;
+  transition:opacity 1.5s ease;
 }
     
-#contenido-principal{
-  width:100%;
-  min-height:100%;
-
-  display:flex;
-  flex-direction:column;
-
-  justify-content:center;
-  align-items:center;
-
-  text-align:center;
-}
     
 #pantalla-negra{
   position:absolute;
@@ -558,8 +563,6 @@ if(window.innerWidth <= 768){
         setTimeout(() => {
 
           contenido.style.opacity = "1";
-          menu.classList.add("visible");
-
           negro.style.opacity = "0";
 
         }, 50);
