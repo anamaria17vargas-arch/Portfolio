@@ -373,8 +373,6 @@
     color:rgba(255,255,255,0.8);
     transition:opacity 1s ease;
   }
-}
-  @media (max-width:768px){
 
 #intro-mobile{
   position:fixed;
@@ -422,7 +420,6 @@
     width:100%;
     padding:20px 0;
   }
-}
 }
 
   </style>
@@ -502,9 +499,7 @@
 
 <div id="pantalla-negra"></div>
       
-@media (max-width:768px){
-      
-      <div class="cabecera-principal">
+     <div id="intro-mobile">
 
   <img src="img/polilla.png" class="polilla">
 
@@ -521,6 +516,14 @@
   <div class="registro">
     REGISTRO ABIERTO – ARCHIVO EN USO
   </div>
+
+</div>
+
+<div id="pantalla-negra"></div>
+
+<div id="contenido-principal">
+
+  <!-- TODO EL MENÚ -->
 
 </div>
 
@@ -551,6 +554,33 @@
         <a href="paisaje_digital.html">PAISAJE DIGITAL</a>
         <a href="polanima.html">POLANIMA</a>
       </div>
+       <img src="img/polilla.png" class="polilla">
+
+  <div class="entrada">INICIO</div>
+
+  <div class="porcelanita">
+    PORCELANITA
+  </div>
+
+  <div class="nombre">
+    ANA MARÍA VARGAS_
+  </div>
+
+  <div class="registro">
+    REGISTRO ABIERTO – ARCHIVO EN USO
+  </div>
+
+  <div class="mapa-archivo">
+
+    ...
+
+  </div>
+
+  <div class="sobre-mi-link">
+    ...
+  </div>
+
+</div>
     </div>
 
   </div>
@@ -569,11 +599,7 @@ if(window.innerWidth <= 768){
 
   const intro = document.getElementById("intro-mobile");
   const negro = document.getElementById("pantalla-negra");
-
   const contenido = document.getElementById("contenido-principal");
-  contenido.style.opacity = "0";
-  
-  /* POLILLA + TEXTO */
 
   setTimeout(() => {
 
@@ -582,8 +608,6 @@ if(window.innerWidth <= 768){
     setTimeout(() => {
 
       intro.style.display = "none";
-
-      /* FADE NEGRO */
 
       negro.style.opacity = "1";
 
@@ -598,11 +622,11 @@ if(window.innerWidth <= 768){
 
         }, 50);
 
-      }, 1000);
+      }, 800);
 
-    }, 1000);
+    }, 1200);
 
-  }, 4000);
+  }, 5000);
 
 }
 
