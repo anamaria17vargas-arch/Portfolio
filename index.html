@@ -280,6 +280,7 @@
   color: white;
 }
 /* ===== ELEMENTOS SOLO PARA CELULAR ===== */
+#intro-mobile,
 #estado-mobile{
   display:none;
 }
@@ -292,7 +293,10 @@
        (sin tocar celular ni PC grande)
        ===================================== */
 @media (max-width:768px){
-
+  
+#intro-mobile{
+  display:flex;
+}
   .marco{
   width:98vw;
   height:98vh;
@@ -407,7 +411,7 @@
 #contenido-principal{
   display:none;
   opacity:0;
-  padding-top:80px;
+  padding-top:40px;
   transition:opacity 1.5s ease;
 }    
 }
@@ -487,6 +491,22 @@
       
         <div id="contenido-principal">
 
+          <img src="img/polilla.png" class="polilla">
+
+<div class="entrada">INICIO</div>
+
+<div class="porcelanita">
+  PORCELANITA
+</div>
+
+<div class="nombre">
+  ANA MARÍA VARGAS_
+</div>
+
+<div class="registro">
+  REGISTRO ABIERTO – ARCHIVO EN USO
+</div>
+
   <div class="mapa-archivo">
 
     <div class="categoria">
@@ -552,7 +572,7 @@ if(window.innerWidth <= 768){
 
       setTimeout(() => {
 
-        contenido.style.display = "block";
+        contenido.style.display = "flex";
 
         setTimeout(() => {
 
