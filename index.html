@@ -285,9 +285,6 @@
   display:none;
 }
 
-  /* resto de estilos móvil */
-
-}
     /* =====================================
        ✦ SOLO PC DE PANTALLA MÁS PEQUEÑA
        (sin tocar celular ni PC grande)
@@ -418,7 +415,13 @@
   .cabecera-pc{
     display:none;
   }
+      
+@media (max-width:768px){
 
+  #contenido-principal{
+    width:100%;
+    padding:20px 0;
+  }
 }
 }
 
@@ -499,22 +502,26 @@
 
 <div id="pantalla-negra"></div>
       
-        <div id="contenido-principal">
+@media (max-width:768px){
+      
+      <div class="cabecera-principal">
 
-          <img src="img/polilla.png" class="polilla">
+  <img src="img/polilla.png" class="polilla">
 
-<div class="entrada">INICIO</div>
+  <div class="entrada">INICIO</div>
 
-<div class="porcelanita">
-  PORCELANITA
-</div>
+  <div class="porcelanita">
+    PORCELANITA
+  </div>
 
-<div class="nombre">
-  ANA MARÍA VARGAS_
-</div>
+  <div class="nombre">
+    ANA MARÍA VARGAS_
+  </div>
 
-<div class="registro">
-  REGISTRO ABIERTO – ARCHIVO EN USO
+  <div class="registro">
+    REGISTRO ABIERTO – ARCHIVO EN USO
+  </div>
+
 </div>
 
   <div class="mapa-archivo">
