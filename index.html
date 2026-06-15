@@ -280,16 +280,9 @@
   color: white;
 }
 /* ===== ELEMENTOS SOLO PARA CELULAR ===== */
-#intro-mobile,
 #estado-mobile{
   display:none;
 }
-    @media (max-width:768px){
-
-  #intro-mobile,
-  #estado-mobile{
-    display:block;
-  }
 
   /* resto de estilos móvil */
 
@@ -414,6 +407,7 @@
 #contenido-principal{
   display:none;
   opacity:0;
+  padding-top:80px;
   transition:opacity 1.5s ease;
 }    
 }
@@ -540,7 +534,7 @@ if(window.innerWidth <= 768){
   const negro = document.getElementById("pantalla-negra");
 
   const contenido = document.getElementById("contenido-principal");
-  contenido.style.opacity = "1";
+  contenido.style.opacity = "0";
   
   /* POLILLA + TEXTO */
 
