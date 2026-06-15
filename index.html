@@ -404,22 +404,16 @@
 }
 
 #contenido-principal{
-  opacity:1;
-} 
+  width:100%;
+  padding:20px 0;
+  display:none;
+  opacity:0;
+  transition:opacity 1.5s ease;
+}
 
 #cabecera-pc{
     display:none;
 }
-      
-#contenido-principal{
-    width:100%;
-    padding:20px 0;
-  }  
-  #contenido-principal{
-    display:none;
-    opacity:0;
-    transition:opacity 1.5s ease;
-  }
 }
 
   </style>
@@ -486,7 +480,9 @@
 
  <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
 
-<div id="pantalla-negra"></div>
+</div> <!-- CIERRE DE intro-mobile -->
+
+    <div id="pantalla-negra"></div>
 
    <!-- CONTENIDO -->
     <div id="contenido-principal">
@@ -546,6 +542,7 @@
 
   </div>
 </div>
+  
 <script>
 
 if(window.innerWidth <= 768){
