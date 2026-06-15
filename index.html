@@ -363,7 +363,7 @@
 
 @media (max-width:768px){
 
-  #estado-archivo{
+#estado-archivo{
     opacity:0;
     margin-top:15px;
     margin-bottom:20px;
@@ -404,21 +404,21 @@
 }
 
 #contenido-principal{
-  display:none;
-  opacity:0;
-  transition:opacity 1.5s ease;
-}    
-    @media (max-width:768px){
+  opacity:1;
+} 
 
-  .cabecera-pc{
+#cabecera-pc{
     display:none;
-  }
+}
       
-@media (max-width:768px){
-
-  #contenido-principal{
+#contenido-principal{
     width:100%;
     padding:20px 0;
+  }  
+  #contenido-principal{
+    display:none;
+    opacity:0;
+    transition:opacity 1.5s ease;
   }
 }
 
@@ -485,10 +485,6 @@
  <div class="nombre">ANA MARÍA VARGAS_</div>
 
  <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
-
-    </div>
-
-</div>
 
 <div id="pantalla-negra"></div>
 
