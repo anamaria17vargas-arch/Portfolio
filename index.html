@@ -349,6 +349,12 @@
   .sobre-mi-link{
     margin-top:20px;
   }
+  
+  .sobre-mi-link{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 }
 
 /* ===== INTRO SOLO CELULAR ===== */
@@ -379,8 +385,8 @@
 }
   @media (max-width:768px){
 
- #intro-mobile{
-  position:absolute;
+#intro-mobile{
+  position:fixed;
   inset:0;
 
   display:flex;
@@ -389,8 +395,7 @@
   align-items:center;
 
   text-align:center;
-
-  transition:opacity 1s ease;
+  z-index:40;
 }
 
 #pantalla-negra{
@@ -499,51 +504,41 @@
 <div id="pantalla-negra"></div>
 </div>
         <div id="contenido-principal">
-        <img src="img/polilla.png" class="polilla" alt="Polilla">
-        <div class="entrada">INICIO</div>
-        <div class="porcelanita">PORCELANITA</div>
-        <div class="nombre">ANA MARÍA VARGAS_</div>
-        <div class="registro">REGISTRO ABIERTO – ARCHIVO EN USO</div>
-</div> <!-- bloque-central -->
-        
-        <div id="estado-archivo"></div>
-        
-        <div id="archivo-menu">
-        <div class="mapa-archivo">
 
-  <div class="categoria">
-    <div class="categoria-titulo">ANIMACIÓN 3D</div>
+  <div class="mapa-archivo">
 
-    <div class="obras">
-      <a href="la_noche.html">LA NOCHE</a>
-      <a href="error_404.html">ERROR_404</a>
+    <div class="categoria">
+      <div class="categoria-titulo">ANIMACIÓN 3D</div>
+
+      <div class="obras">
+        <a href="la_noche.html">LA NOCHE</a>
+        <a href="error_404.html">ERROR_404</a>
+      </div>
     </div>
+
+    <div class="categoria">
+      <div class="categoria-titulo">ANIMACIÓN 2D</div>
+
+      <div class="obras">
+        <a href="tren.html">TREN</a>
+        <a href="deterioro.html">DETERIORO</a>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <div class="categoria-titulo">INSTALACIÓN AUDIOVISUAL</div>
+
+      <div class="obras">
+        <a href="paisaje_digital.html">PAISAJE DIGITAL</a>
+        <a href="polanima.html">POLANIMA</a>
+      </div>
+    </div>
+
   </div>
 
-  <div class="categoria">
-    <div class="categoria-titulo">ANIMACIÓN 2D</div>
-
-    <div class="obras">
-      <a href="tren.html">TREN</a>
-      <a href="deterioro.html">DETERIORO</a>
-    </div>
+  <div class="sobre-mi-link">
+    <a href="sobre_mi.html">SOBRE MÍ</a>
   </div>
-
-  <div class="categoria">
-    <div class="categoria-titulo">INSTALACIÓN AUDIOVISUAL</div>
-
-    <div class="obras">
-      <a href="paisaje_digital.html">PAISAJE DIGITAL</a>
-      <a href="polanima.html">POLANIMA</a>
-    </div>
-  </div>
-
-</div>
-
-<div class="sobre-mi-link">
-  <a href="sobre_mi.html">SOBRE MÍ</a>
-</div>
-</div>
 
       </div>
 
