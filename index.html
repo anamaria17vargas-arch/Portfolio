@@ -124,14 +124,6 @@
     }
 
     /* ===== BLOQUE CENTRAL ===== */
-    .bloque-central {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
     .polilla {
       width: 45vw;
       max-width: 520px;
@@ -361,17 +353,6 @@
 
 @media (max-width:768px){
 
-  #archivo-menu{
-    opacity:0;
-    visibility:hidden;
-    transition:opacity 1.2s ease;
-  }
-
-  #archivo-menu.visible{
-    opacity:1;
-    visibility:visible;
-  }
-
   #estado-archivo{
     opacity:0;
     margin-top:15px;
@@ -397,7 +378,20 @@
   text-align:center;
   z-index:40;
 }
+    
+#contenido-principal{
+  width:100%;
+  min-height:100%;
 
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+    
 #pantalla-negra{
   position:absolute;
   inset:0;
@@ -416,17 +410,7 @@
   display:none;
   opacity:0;
   transition:opacity 1.5s ease;
-}
-
-#archivo-menu{
-  opacity:0;
-  transition:opacity 1.5s ease;
-}
-
-#archivo-menu.visible{
-  opacity:1;
-}
-    
+}    
 }
 
   </style>
@@ -479,8 +463,7 @@
 
   <div class="marco">
     <div class="hoja">
-
-      <div class="bloque-central">
+      
         <div id="intro-mobile">
 
   <img src="img/polilla.png" class="polilla">
@@ -502,7 +485,7 @@
 </div>
 
 <div id="pantalla-negra"></div>
-</div>
+      
         <div id="contenido-principal">
 
   <div class="mapa-archivo">
@@ -552,10 +535,8 @@ if(window.innerWidth <= 768){
   const negro = document.getElementById("pantalla-negra");
 
   const contenido = document.getElementById("contenido-principal");
-  const menu = document.getElementById("archivo-menu");
-
-  contenido.style.display = "none";
-
+  contenido.style.opacity = "1";
+  
   /* POLILLA + TEXTO */
 
   setTimeout(() => {
